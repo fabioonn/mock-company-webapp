@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Build') {
+            steps {
+                // TODO: Execute build command
+                sh './gradlew assemble'
+            }
+        }
+        stage('Test') {
+            steps {
+                // TODO: Execute test command
+                sh './gradlew test'
+            }
+        }
+    }
+}
